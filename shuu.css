@@ -1,0 +1,428 @@
+/*================================================================================================================================================================================================================================================================*/
+
+		html, body {
+  			font-family: 'Verdana' !important, sans-serif;
+  			font-size: 14px }
+/*================================================================================================================================================================================================================================================================*/
+
+											/* Основной файл */
+						@import url(https://shiki-theme.web.app/import/main.css);
+											/* Стили обложки профиля */
+						@import url(https://shiki-theme.web.app/import/profile-cover.css);
+											/* Изменения профиля v1.0 */
+						@import url(https://shiki-theme.web.app/import/profile-update.1.css);
+											/* Изменения профиля v1.1 */
+						@import url(https://shiki-theme.web.app/import/profile-update.1.1.css);
+				 							/* Компактная сортировка уведомлений */
+						@import url(https://css-club.web.app/css/compact_news--grid.css);
+											/* Анимация переключения истории */
+						@import url(https://shiki-theme.web.app/import/profile-history_animation.css);	
+											/* Альтернатива достижений и жанровых */
+						@import url(https://raw.githubusercontent.com/anorva/Shikimori/master/Import-files/Trophies.css);
+
+
+
+
+
+							/* Настройки переменных темы */
+@media{:root {
+  /* Цвета текстов */
+  --color-text-primary: #e3e3e3;
+  --color-text-secondary: #b9b9b9;
+  --color-text-hint: #9a9a9a;
+  --color-text-disabled: #777777;
+  --color-overlay-text-hovered: rgba(227, 227, 227, 0.04);
+  --color-overlay-text-selected: rgba(227, 227, 227, 0.08);
+  --color-overlay-text-pressed: rgba(227, 227, 227, 0.12);
+  /* Цвет ссылок */
+  --color-link: #6a7e9b;
+  --color-link-hover: #6a7e9b;
+  --color-link-active: #506078;
+  /* Основной цвет */
+  --color-primary: #6a7e9b;
+  --color-text-on-primary: #eceef2;
+  --color-primary-reduced: #56657a;
+  --color-primary-hovered: #7688a3;
+  --color-primary-pressed: #667995;
+  --color-overlay-primary-hovered: rgba(106, 126, 155, 0.08);
+  --color-overlay-primary-selected: rgba(106, 126, 155, 0.12);
+  --color-overlay-primary-pressed: rgba(106, 126, 155, 0.16);
+  /* Акцентирующий цвет */
+  --color-accent: #6a7e9b;
+  --color-text-on-accent: #eceef2;
+  --color-accent-reduced: #56657a;
+  --color-accent-fade: #464f5d;
+  --color-overlay-accent-hovered: rgba(106, 126, 155, 0.08);
+  --color-overlay-accent-selected: rgba(106, 126, 155, 0.12);
+  --color-overlay-accent-pressed: rgba(106, 126, 155, 0.16);
+  /* Фоновые цвета */
+  --color-background: #242424;
+  --color-background-translucent: rgba(36, 36, 36, 0.9);
+  --color-background-dialog: #313131;
+  --color-surface: #2e2e2e;
+  --color-surface-hover: #3f3f3f;
+  --color-surface-active: #474747;
+  --color-border: #3e3e3e;
+  /* Цвета верхнего меню */
+  --color-menu-background: #343434;
+  --color-menu-background-fade: rgba(52, 52, 52, 0.48);
+  --color-menu-text-primary: #e5e5e5;
+  --color-menu-text-disabled: #818181;
+  --color-menu-icon: #cecece;
+  --color-menu-search: #4c4c4c;
+  --color-menu-search-fade: rgba(229, 229, 229, 0.12);
+  --color-menu-background-hover: #444444;
+  --color-menu-background-active: #4c4c4c;
+  /* Цвета кнопок списков */
+  --color-planned: #3e5d6a;
+  --color-onhold: #4b4b4b;
+  --color-watching: #384f59;
+  --color-rewatching: #384f59;
+  --color-completed: #4b533a;
+  --color-dropped: #552f2f;
+
+  /* Обложка профиля */
+  --user-cover: url(https://data.whicdn.com/images/336201424/original.jpg);
+  /* Фон сайта */
+  --user-background: url(https://cmkt-image-prd.freetls.fastly.net/0.1.0/ps/1904287/300/200/m2/fpc/wm0/o4atcerczjvzyibbvtwohryog9n0ahlkjloo2ix7pjznxstpytbxtllkeoxtgiyu-.jpg?1479298917&s=352dd66e92a7ed5f0b6094648bca7739);
+}}
+
+/* Моя обложка в профиле */
+.p-profiles .profile-head[data-user-id="334762"]::before {
+  display: block; /* Отображение обложки */
+  background-position: center 50%;
+}
+
+
+
+/*================================================================================================================================================================================================================================================================*/
+
+/* Оформление вкладок */
+.u-tabs > div:not([data-tab]) {
+  white-space: nowrap;
+  overflow-x: auto;
+}
+.u-tabs [data-tab-switch] {
+  display: inline-block;
+  padding: .25em .75em;
+  border: 2px solid;
+  border-radius: 20px;
+  font-weight: bold;
+  opacity: .5;
+  cursor: pointer;
+}
+.u-tabs [data-tab-switch]:not(:first-child) {
+  margin-left: 10px;
+}
+.u-tabs .active[data-tab-switch] {
+  color: #ffffff;
+  opacity: 1;
+}
+.u-tabs [data-tab] {
+  margin-top: 10px;
+}
+/**/
+
+
+
+/* Закрепление верхнего меню */
+	.l-top_menu-v2 {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+	.l-page {
+  margin-top: 46px;
+}
+	.b-comments-notifier {
+  top: 46px !important;
+}
+
+/*================================================================================================================================================================================================================================================================*/
+
+/* Внутреннее свечение пунктов меню */
+	.l-top_menu-v2 .submenu > a:hover,
+	.l-top_menu-v2 .menu-dropdown > button:not(.mobile):hover,
+	.l-top_menu-v2 .menu-dropdown > button:not(.mobile) a:hover {
+  box-shadow: 0 0 20px rgba(106, 126, 155, 1),
+              0 0 20px rgba(255,255,255,1) inset;
+  transition: 0.3s;
+}
+
+/*================================================================================================================================================================================================================================================================*/
+
+/* Альтернативное расположение блоков "Обо мне" */
+@media only screen and (min-width: 768px) {
+	.p-profiles-show .profile-content .cc-2 > .c-column {
+    width: 100%;
+  }
+	.p-profiles-show .profile-content .cc-2 > .c-left {
+    position: relative;
+    width: 77%;
+    padding-right: 30px;
+    margin-right: 0;
+    z-index: 1;
+  }
+	.p-profiles-show .lifetime {
+    margin-bottom: 15px;
+  }
+	.p-profiles-show .profile-content .cc-2 > .c-right {
+    float: none;
+  }
+	.p-profiles-show .profile-content .cc-2 > .c-right .cc-2a {
+    width: 23%;
+    overflow: hidden;
+  }
+	.p-profiles-show .profile-content .cc-2 > .c-right .cc-2a > .c-column {
+    width: 100%;
+    margin: 0;
+  }
+	.p-profiles-show .profile-content .cc-2 > .c-right .cc-2a > .c-column:last-child {
+    margin-top: 15px;
+  }
+	.p-profiles-show .profile-content .cc-2 > .c-right > .block:last-child {
+    clear: both;
+  }
+}
+
+/*================================================================================================================================================================================================================================================================*/
+
+/* Аниме/Манга/Ранобэ рядом с пунктами истории */
+	.history-page a:before {
+  display: inline-block;
+  vertical-align: top;
+  width: 56px;}
+	.history-page a[href ^= "/a"]:before {
+  content: '[Аниме]';
+  color: var(--color-text-primary);}
+	.history-page a[href ^= "/m"]:before {
+  content: '[Манга]';
+  color: var(--color-text-primary);}
+	.history-page a[href ^= "/r"]:before {
+  content: '[Ранобэ]';
+  color: var(--color-text-primary);}
+[data-locale="en"] .history-page a[href ^= "/a"]:before {
+  content: '[Anime]';}
+[data-locale="en"] .history-page a[href ^= "/m"]:before {
+  content: '[Manga]';}
+[data-locale="en"] .history-page a[href ^= "/r"]:before {
+  content: '[Ranobe]';
+}
+
+/*================================================================================================================================================================================================================================================================*/
+
+/* Падающий снег на фоне */
+body:before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Изображения снега: */
+  background-image: url(https://i.imgur.com/TpOI4DC.png),
+                    url(https://i.imgur.com/92lgmBN.png),
+                    url(https://i.imgur.com/ACiIkIG.png);
+  /* Размер изображений по порядку: */
+  /* (размер уменьшен в 2 раза: снежинки больше похожи на точки, чем на  детские рисунки */
+  /* (можно удалить) */
+  background-size: 250px, 200px, 150px;
+  /* Скорость анимации: */
+  /* (чем больше время, тем медленнее идет снег) */
+  animation: snow 16s linear infinite;
+}
+
+/* Анимация снега */
+@keyframes snow {
+  0% {
+    background-position: 0px 0px,
+                         0px 0px,
+                         0px 0px;}
+  100% {
+    /* (Указан полный размер изображений по порядку, указанному в body:before) */
+    background-position: 500px 1000px,
+                         400px 400px,
+                         300px 300px;}
+}
+
+/*================================================================================================================================================================================================================================================================*/
+
+/* Альтернативное расположение блоков "Обо мне" */
+	@media only screen and (min-width: 768px) {
+    .p-profiles-show .profile-content .cc-2 > .c-column {
+    width: 100%;}
+
+	.p-profiles-show .profile-content .cc-2 > .c-left {
+    position: relative;
+    width: 77%;
+    padding-right: 30px;
+    margin-right: 0;
+    z-index: 1;}
+	.p-profiles-show .lifetime {
+    margin-bottom: 15px;}
+	.p-profiles-show .profile-content .cc-2 > .c-right {
+    float: none;}
+	.p-profiles-show .profile-content .cc-2 > .c-right .cc-2a {
+    width: 23%;
+    overflow: hidden;}
+	.p-profiles-show .profile-content .cc-2 > .c-right .cc-2a > .c-column {
+    width: 100%;
+    margin: 0;}
+	.p-profiles-show .profile-content .cc-2 > .c-right .cc-2a > .c-column:last-child {
+    margin-top: 15px;}
+	.p-profiles-show .profile-content .cc-2 > .c-right > .block:last-child {
+    clear: both;}
+}
+
+/*================================================================================================================================================================================================================================================================*/
+
+/* Альтернативный спойлер блока "Обо мне" */
+	.p-profiles .about.block .b-spoiler label {
+  border: none;
+  display: inline-block !important;
+  font-weight: bold; /* толщина шрифта, можно убрать, если не нужно */
+  color: #000; /* цвет текста спойлера */
+  background: var(--color-link); /* цвет фона спойлера */
+  height: 30px; 
+  width: 100%;
+  font-size: 12pt; /* размер шрифта текста на спойлере */
+  padding-top: 3px; 
+  text-align: center;
+  margin-bottom: 5px;}
+
+	.p-profiles .about.block .b-spoiler .after:before, .about.block .b-spoiler .before:before {
+  content: '';}
+
+	.p-profiles .about.block .b-spoiler .before {
+  width: 100%; 
+  height: 50px;
+  display: inline-block !important;
+  margin-top: -50px;
+}
+
+
+
+
+/*================================================================================================================================================================================================================================================================*/
+
+/* Цвета полей состояния действия с произведением */
+	.b-add_to_list .trigger .add-trigger,
+	.b-add_to_list .trigger .edit-trigger {
+  display: flex;
+  width: 100%;
+  padding: 0 .5em 0 0;
+  border-right: 1px solid var(--color-link);
+  border-color: inherit;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+	.b-add_to_list.planned .trigger,
+	.b-add_to_list.planned .option {
+  background: transparent;
+  border: 1px solid var(--color-link);
+  color: var(--color-text-primary);
+  border-right: 1px solid var(--color-link);
+}
+
+	.b-add_to_list.on_hold .trigger,
+	.b-add_to_list.on_hold .option {
+  background: transparent;
+  border: 1px solid var(--color-link);
+  color: var(--color-text-primary);
+  border-right: 1px solid var(--color-link);
+}
+	.b-add_to_list.watching .trigger,
+	.b-add_to_list.watching .option {
+  background: transparent;
+  border: 1px solid var(--color-link);
+  color: var(--color-text-primary);
+  border-right: 1px solid var(--color-link) !important;
+}
+
+
+
+/* _________________________________________________________________________*/
+
+	.b-db_entry-variant-list_item>.info 
+	.b-user_rate .b-add_to_list .trigger .edit-trigger, 
+	.b-catalog_entry-tooltip 
+	.b-add_to_list .trigger .edit-trigger {
+    border-right: 1px solid var(--color-link);
+}
+
+.b-add_to_list .trigger-arrow {
+    position: relative;
+    height: 40px;
+}
+
+
+/*_______________________________________________________________________________________*/
+
+	.b-tag[href] {
+    border-color: var(--color-link);
+    cursor: pointer;
+}
+	.b-anime_status_tag.other {
+    background-color: transparent;
+    border-color: var(--color-link);
+    color: var(--color-text-secondary);
+}
+	.b-add_to_list.rewatching .trigger,
+	.b-add_to_list.rewatching .option {
+  background: transparent;
+  border: 1px solid var(--color-link);
+  color: var(--color-text-primary);
+  border-right: 1px solid var(--color-link);
+}
+	.b-add_to_list.completed .trigger,
+	.b-add_to_list.completed .option {
+  background: transparent !important;
+  border: 1px solid var(--color-link) !important;
+  color: var(--color-text-primary) !important;
+  border-right: 1px solid var(--color-link) !important;
+}
+	.b-add_to_list.dropped .trigger,
+	.b-add_to_list.dropped .option {
+  background: transparent;
+  border: 1px solid var(--color-link);
+  color: var(--color-text-primary);
+  border-right: 1px solid var(--color-link);
+}
+
+/*================================================================================================================================================================================================================================================================*/
+
+/* Цвета состояния произведения */
+	.b-anime_status_tag.ongoing {
+   background-color: transparent;
+   border: 1px solid #f157ff;
+   color: #f157ff;
+   cursor: default;
+   display: inline-block;}
+
+	.b-anime_status_tag.anons {
+   background-color: transparent;
+   border: 1px solid #fac12f;
+   color: #fac12f;
+   cursor: default;
+   display: inline-block;}
+	.b-anime_status_tag.released {
+   background-color: transparent;
+   border: 1px solid #8aff66;
+   color: #8aff66;
+   cursor: default;
+   display: inline-block;
+}
+	.subheadline {
+  color: var(--color-link);
+}
+	.b-db_entry-variant-list_item>.info .line .value>a, 
+	.b-db_entry-variant-list_item>.info .line .value>div, 
+	.b-db_entry-variant-list_item>.info .line .value>span {
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    margin-top: -2px;
+    margin-bottom: 2.5px;
+}
+
